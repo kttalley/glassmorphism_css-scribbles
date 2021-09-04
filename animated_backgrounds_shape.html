@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <style>
+            @keyframes fly {
+                100% {
+                    transform:rotate(1turn) translate(100px) rotate(-1turn);
+                }
+            }
+
+            @keyframes flyPlus {
+                100% {
+                    transform:rotate(-1turn) translate(100px) rotate(1turn);
+                }
+            }
+
+            .wrapper {
+                width: 400px;
+                height: 400px;
+                background: #fff;
+                position: relative;
+                overflow: hidden;
+                border-radius: 40px;
+            }
+
+            .base {
+                position: absolute;
+                filter: blur(60px);
+                opacity: 0.8;
+            }
+
+            .one {
+                border-radius: 100%;
+                width: 600px;
+                height: 600px;
+                background-color: #373372;
+                left: -50px;
+                top: -300px;
+                z-index: 3;
+                animation: fly 12s linear infinite;
+                transform: rotate(0) translate(80px) rotate(0);
+            }
+
+            .two {
+                width: 500px;
+                height: 800px;
+                background-color: #7c336c;
+                bottom: -30px;
+                left:-80px;
+            }
+
+            .three {
+                border-radius: 100%;
+                width: 450px;
+                height: 450px;
+                bottom: -80px;
+                right: -100px;
+                background-color: #B3588A;
+                animation: flyPlus 8s linear infinite;
+                transform: rotate(0) translate(100px) rotate(0);
+                
+            }
+            .four {
+                border-radius: 100%;
+                width: 25px;
+                height: 25px;
+                bottom: -80px;
+                right: -100px;
+                background-color: rgba(234,45,234);
+                animation: flyPlus 4s linear infinite;
+                transform: rotate(0) translate(100px) rotate(0);
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class = "wrapper">
+            <div class = "base two"></div>
+            <div class = "base one"></div>
+            <div class = "base three"></div>
+            <div class = "base four"></div>
+        </div>
+    </body>
+    
+</html>
